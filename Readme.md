@@ -32,9 +32,9 @@ hexo init my-blog
 cd my-blog
 npm install
 ```
-### 2.安装hexo-admin-cn并启动
+### 2.安装hexo-admin-zhcn并启动
 ```sh
-npm install --save hexo-admin-cn
+npm install --save hexo-admin-zhcn
 hexo server -d
 open http://localhost:4000/admin/
 ```
@@ -79,8 +79,8 @@ metadata:
 
 ### 6、贡献！
 - 让我知道如何进行改进
-  [githubissues](https://github.com/jaredly/hexo-admin-cn/issues)
-- [fork](https://github.com/tonywdy/hexo-admin-cn) 和拉请求
+  [githubissues](https://github.com/jaredly/hexo-admin-zhcn/issues)
+- [fork](https://github.com/tonywdy/hexo-admin-zhcn) 和拉请求
 
 # 信用
 
