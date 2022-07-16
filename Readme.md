@@ -1,4 +1,4 @@
-![logo](docs/logo.png?raw=true)
+![logo](https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/16_16_55_10_logo.png)
 
 [Hexo博客引擎]的管理UI(http://hexo.io). 基于[幽灵](http://ghost.org)界面，灵感来自[svbtle](http://svbtle.com)和[散文](http://prose.io).
 
