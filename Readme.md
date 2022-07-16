@@ -1,30 +1,30 @@
 ![logo](docs/logo.png?raw=true)
 
-An admin UI for the [Hexo blog engine](http://hexo.io). Based off of the [Ghost](http://ghost.org) interface, with inspiration from [svbtle](http://svbtle.com) and [prose.io](http://prose.io).
+[Hexo博客引擎]的管理UI(http://hexo.io). 基于[幽灵](http://ghost.org)界面，灵感来自[svbtle](http://svbtle.com)和[散文](http://prose.io).
 
-## Hexo Version
+## Hexo版本
 
-For 2.x, use version `0.3.0` of this plugin. Version `1.x` and beyond only
-support Hexo v3.x.
+2022.7.16 目前支持最新版HEXO，本汉化将实时同步hexo-admin
 
-### Contents
-- [**Screenshots**](#screenshots)
-- [**Quickstart**](#quickstart)
-- [**Credits**](#credits)
+### 目录
+- [**屏幕截图**](#屏幕截图)
+- [**快速启动**](#快速启动)
+- [**信用**](#信用)
 
-# Local use vs deployment
-This plugin was originally designed as a local editor -- you run hexo locally, use `hexo-admin` to author posts, and then use `hexo generate` or `hexo deploy` to send the generated static HTML files up to github pages or some other static server.
+# 本地使用与部署
+这个插件最初设计为一个本地编辑器——在本地运行```hexo```，使用```hexo admin cn```创作帖子，然后使用```hexo generate```或```hexo deploy```生成的静态```HTML```文件发送到```github```页面或其他静态服务器。
 
-However, `hexo-admin` can be run on your live blog, as long as you're using a non-static hosting service such as Heroku, DigitalOcean, etc. Static hosting services such as Github pages and Surge.sh does not support running hexo-admin from your live site.
-If you're using Hexo admin from your live blog, you should definitely set up a password (see below) -- otherwise anyone will be able to edit your content.
+不过，只要你使用非静态托管服务，如```Heroku```、```DigitalOcean```等，就可以在你的```live```博客上运行```hexo admin```。静态托管服务，如```Github pages```和```Surge.sh```不支持从您的```live```站点运行```hexo admin cn```。
 
-# Screenshots
-![posts view](docs/pasted-0.png?raw=true)
+如果你在live博客中使用Hexo admin，你一定要设置密码（见下文）——否则任何人都可以编辑你的内容。
 
-![editor view](docs/pasted-1.png?raw=true)
+# 屏幕截图
+![posts view](https://s2.loli.net/2022/07/16/aZXtbLTNiBUqSjh.png)
 
-# Quickstart
-### 1. Setup hexo & create a blog
+![editor view](https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/16_16_11_7_20220716161105.png)
+
+# 快速启动
+### 1、设置hexo并创建博客
 ```sh
 npm install -g hexo
 cd ~/
@@ -32,18 +32,18 @@ hexo init my-blog
 cd my-blog
 npm install
 ```
-### 2. Install the admin & start things up
+### 2.安装hexo-admin-cn并启动
 ```sh
-npm install --save hexo-admin
+npm install --save hexo-admin-cn
 hexo server -d
 open http://localhost:4000/admin/
 ```
-### 3. Profit!
-The UI should be pretty discoverable -- let me know if you can't find something.
+### 3、利润！
+用户界面应该很容易发现——如果你找不到什么，请告诉我。
 
-### 4. Password protection
-If you're using Hexo admin on your live server, you want some password
-protection. To enable this, you just add a few config variables to your hexo
+### 4、密码保护
+如果你在live server上使用Hexo admin，你需要一些密码
+保护为了实现这一点，只需在hexo中添加几个配置变量
 `_config.yml`:
 
 ```
@@ -53,36 +53,38 @@ admin:
   secret: a secret something
 ```
 
-The `password_hash` is the bcrypt hash of your password. The `secret` is used
-to make the cookies secure, so it's a good idea to have it be long and
-complicated.
+![](https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/16_16_14_11_20220716161411.png)
 
-A utility in Hexo admin's Settings can hash your password and generate the `admin`
-section for you. Start Hexo and go to `Settings > Setup authentification`
-and fill out your information. Copy the generated YAML into your `_config.yml`.
+“password\hash”是密码的bcrypt哈希。使用```秘密```
+为了保证饼干的安全，最好把饼干放长一点(复杂的)
 
-Once that's in place, start up your hexo server and going to `/admin/` will
-require you to enter your password.
+Hexo admin设置中的实用程序可以散列您的密码并生成```admin```
+为您准备的部分。启动Hexo，进入“设置>设置身份验证”`
+并填写您的信息。将生成的YAML复制到您的```_config.yml`。
 
-### 5. Custom post metadata
-To add and edit your own post metadata with the admin interface, add the
-metadata variable and your custom variables to your hexo `_config.yml`:
+一旦这一切就绪，启动hexo服务器并转到```/admin/```将要要求您输入密码。
+
+### 5、自定义post元数据
+要使用管理界面添加和编辑您自己的帖子元数据，请添加
+元数据变量和自定义变量`_config.yml`:
 ```
 metadata:
   author_id: defaultAuthorId
   language:
 ```
-You can provide default values that will be used to initialize the metadata
-of a new post. These can be either primitives or arrays.
+![](https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/16_16_16_23_20220716161623.png)
 
-### 6. Contribute!
-- let me know how it can be improved in the [github
-  issues](https://github.com/jaredly/hexo-admin/issues)
-- [fork](https://github.com/jaredly/hexo-admin) and pull-request
+您可以提供用于初始化元数据的默认值
+一个新职位。这些可以是基元或数组。
 
-# Credits
+### 6、贡献！
+- 让我知道如何进行改进
+  [githubissues](https://github.com/jaredly/hexo-admin-cn/issues)
+- [fork](https://github.com/tonywdy/hexo-admin-cn) 和拉请求
 
-built with ❤ by [Jared Forsyth](http://jaredly.github.io)
-([@jaredforsyth](http://twitter.com/jaredforsyth)) using
-[react](http://facebook.github.io/react), [browserify](
-http://browserify.org), and [less](http://lesscss.org).
+# 信用
+
+本插件为KINGWDY汉化！具体事项请看[我的博客](https://tonywdy.github.io/)！
+
+![](https://avatars.githubusercontent.com/u/106950730?s=96&v=4)
+
